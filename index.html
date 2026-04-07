@@ -2,14 +2,51 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="SmileTrack" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="theme-color" content="#0891b2" />
 <title>SmileTrack</title>
+
+<!-- Inline SVG icon as apple-touch-icon via data URI -->
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDZiNmQ0Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMjU2M2ViIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxODAiIHJ4PSI0MCIgZmlsbD0idXJsKCNnKSIvPjxwYXRoIGQ9Ik01NSAxMTBjMTAtMTggMjUtMjggMzUtMjhzMjUgMTAgMzUgMjgiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIGZpbGw9Im5vbmUiLz48Y2lyY2xlIGN4PSI2NSIgY3k9Ijc1IiByPSI3IiBmaWxsPSIjZmZmIi8+PGNpcmNsZSBjeD0iMTE1IiBjeT0iNzUiIHI9IjciIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNNzAgNTBjLTMtMTIgOC0yMCAxNS0xMiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iLjUiLz48cGF0aCBkPSJNMTEwIDUwYzMtMTItOC0yMC0xNS0xMiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iLjUiLz48L3N2Zz4=" />
+
+<script>
+// Inline web app manifest
+const manifest = {
+  name: "SmileTrack",
+  short_name: "SmileTrack",
+  description: "Smart oral hygiene tracking",
+  start_url: "./SmileTrack.html",
+  display: "standalone",
+  background_color: "#f0f4f8",
+  theme_color: "#0891b2",
+  icons: [
+    { src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDZiNmQ0Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMjU2M2ViIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxODAiIHJ4PSI0MCIgZmlsbD0idXJsKCNnKSIvPjxwYXRoIGQ9Ik01NSAxMTBjMTAtMTggMjUtMjggMzUtMjhzMjUgMTAgMzUgMjgiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIGZpbGw9Im5vbmUiLz48Y2lyY2xlIGN4PSI2NSIgY3k9Ijc1IiByPSI3IiBmaWxsPSIjZmZmIi8+PGNpcmNsZSBjeD0iMTE1IiBjeT0iNzUiIHI9IjciIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNNzAgNTBjLTMtMTIgOC0yMCAxNS0xMiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iLjUiLz48cGF0aCBkPSJNMTEwIDUwYzMtMTItOC0yMC0xNS0xMiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iLjUiLz48L3N2Zz4=", sizes: "180x180", type: "image/svg+xml" }
+  ]
+};
+const blob = new Blob([JSON.stringify(manifest)], { type: "application/json" });
+const manifestURL = URL.createObjectURL(blob);
+const link = document.createElement("link");
+link.rel = "manifest";
+link.href = manifestURL;
+document.head.appendChild(link);
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
   body {
     font-family: 'DM Sans', sans-serif;
     background: #f0f4f8;
@@ -17,9 +54,14 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 24px;
+    min-height: 100dvh;
+    padding: 0;
     -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
   }
+
+  /* On desktop, keep the phone shell. On mobile standalone, go full screen */
   .phone-shell {
     width: 100%;
     max-width: 390px;
@@ -28,11 +70,44 @@
     box-shadow: 0 25px 80px rgba(0,0,0,.12), 0 4px 20px rgba(0,0,0,.06);
     overflow: hidden;
     border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    max-height: 100dvh;
   }
+
+  @media (max-width: 430px) {
+    body { padding: 0; align-items: stretch; }
+    .phone-shell {
+      max-width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+      border: none;
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+  }
+
+  /* Standalone PWA mode */
+  @media all and (display-mode: standalone) {
+    body { padding: 0; align-items: stretch; }
+    .phone-shell {
+      max-width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+      border: none;
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+    .header { padding-top: calc(var(--safe-top) + 16px) !important; }
+    .nav { padding-bottom: calc(var(--safe-bottom) + 10px) !important; }
+  }
+
   .header {
     background: linear-gradient(135deg, #06b6d4, #2563eb);
     color: #fff;
     padding: 28px 24px 22px;
+    flex-shrink: 0;
   }
   .header h1 { font-size: 26px; font-weight: 700; margin-top: 4px; letter-spacing: -0.5px; }
   .header-row { display: flex; align-items: center; justify-content: space-between; }
@@ -41,7 +116,13 @@
     background: rgba(255,255,255,.2); display: flex; align-items: center; justify-content: center;
     font-size: 20px;
   }
-  .content { padding: 20px; }
+
+  .content {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
   .content > * + * { margin-top: 16px; }
 
   /* Score Card */
@@ -59,7 +140,7 @@
   /* Reminder Cards */
   .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
   .section-title { font-size: 15px; font-weight: 600; color: #0f172a; }
-  .section-action { font-size: 13px; font-weight: 500; color: #2563eb; background: none; border: none; cursor: pointer; }
+  .section-action { font-size: 13px; font-weight: 500; color: #2563eb; background: none; border: none; cursor: pointer; font-family: inherit; }
   .reminder-card {
     border-radius: 18px; border: 1px solid #e2e8f0; background: #fff; padding: 16px;
     display: flex; align-items: center; justify-content: space-between;
@@ -69,7 +150,7 @@
   .reminder-meta { font-size: 11px; color: #94a3b8; margin-top: 4px; }
   .badge-on {
     border-radius: 999px; background: #d1fae5; padding: 4px 12px;
-    font-size: 11px; font-weight: 700; color: #047857;
+    font-size: 11px; font-weight: 700; color: #047857; flex-shrink: 0;
   }
 
   /* Chart */
@@ -99,8 +180,10 @@
   /* Dentist tab */
   .export-btn {
     border-radius: 999px; background: #0f172a; color: #fff; border: none;
-    padding: 6px 14px; font-size: 12px; font-weight: 600; cursor: pointer;
+    padding: 6px 14px; font-size: 12px; font-weight: 600; cursor: pointer; font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
   }
+  .export-btn:active { opacity: 0.7; }
   .summary-card {
     border-radius: 22px; border: 1px solid #e2e8f0; background: #fff; padding: 18px;
   }
@@ -117,7 +200,7 @@
   .bar-fill-green { height: 100%; background: #34d399; border-radius: 999px; }
   .bar-fill-blue { height: 100%; background: #60a5fa; border-radius: 999px; }
 
-  .img-row { display: flex; gap: 10px; overflow-x: auto; }
+  .img-row { display: flex; gap: 10px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .img-placeholder {
     min-width: 76px; height: 76px; border-radius: 14px; background: #e2e8f0;
     display: flex; align-items: center; justify-content: center;
@@ -133,12 +216,17 @@
   /* Nav */
   .nav {
     border-top: 1px solid #e2e8f0; background: #fff; padding: 14px 32px;
-    display: flex; align-items: center; justify-content: space-between;
+    display: flex; align-items: center; justify-content: space-around;
+    flex-shrink: 0;
   }
   .nav-btn {
     background: none; border: none; cursor: pointer; text-align: center;
     font-size: 11px; color: #94a3b8; font-family: inherit; font-weight: 500;
+    -webkit-tap-highlight-color: transparent;
+    padding: 4px 12px;
+    transition: color .15s ease;
   }
+  .nav-btn:active { transform: scale(0.95); }
   .nav-btn.active { color: #2563eb; font-weight: 600; }
   .nav-icon { font-size: 20px; display: block; margin-bottom: 2px; }
 </style>
