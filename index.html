@@ -254,7 +254,6 @@ function App() {
               <div>
                 <div className="section-header">
                   <div className="section-title">Reminders</div>
-                  <button className="section-action">Edit</button>
                 </div>
                 {reminders.map((r) => (
                   <div className="reminder-card" key={r.title}>
@@ -273,7 +272,6 @@ function App() {
             <>
               <div className="section-header">
                 <div className="section-title">Care &amp; Insights</div>
-                <button className="section-action">Edit</button>
               </div>
               <div className="chart-wrap">
                 <div className="bar-chart">
@@ -304,7 +302,6 @@ function App() {
             <>
               <div className="section-header">
                 <div className="section-title">Dentist snapshot</div>
-                <button className="export-btn">Export PDF</button>
               </div>
 
               <div className="summary-card">
@@ -353,9 +350,6 @@ function App() {
                 </div>
               </div>
 
-              <div className="dashed-card">
-                <p>Dentist notes (to be filled during visit)</p>
-              </div>
             </>
           )}
         </div>
