@@ -44,11 +44,7 @@ document.head.appendChild(mLink);
     --safe-bottom: env(safe-area-inset-bottom, 0px);
   }
 
-  html, body, #root {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+  html, body, #root { width: 100%; height: 100%; overflow: hidden; }
 
   body {
     font-family: 'DM Sans', sans-serif;
@@ -59,79 +55,69 @@ document.head.appendChild(mLink);
   }
 
   .app {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    width: 100%;
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    display: flex; flex-direction: column; background: #fff; width: 100%;
   }
 
   @media (min-width: 431px) {
     body { display: flex; align-items: center; justify-content: center; }
     .app {
-      position: relative;
-      width: 390px;
-      height: 844px;
-      max-height: 95vh;
-      border-radius: 40px;
-      box-shadow: 0 25px 80px rgba(0,0,0,.12), 0 4px 20px rgba(0,0,0,.06);
-      border: 1px solid #e2e8f0;
-      overflow: hidden;
+      position: relative; width: 390px; height: 844px; max-height: 95vh;
+      border-radius: 40px; box-shadow: 0 25px 80px rgba(0,0,0,.12), 0 4px 20px rgba(0,0,0,.06);
+      border: 1px solid #e2e8f0; overflow: hidden;
     }
   }
 
   .header {
     background: linear-gradient(135deg, #06b6d4, #2563eb);
-    color: #fff;
-    padding: calc(var(--safe-top) + 16px) 20px 20px;
-    flex-shrink: 0;
+    color: #fff; padding: calc(var(--safe-top) + 12px) 20px 14px; flex-shrink: 0;
   }
   .header h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
   .header-row { display: flex; align-items: center; justify-content: space-between; }
   .avatar {
     width: 40px; height: 40px; border-radius: 14px;
-    background: rgba(255,255,255,.2); display: flex; align-items: center; justify-content: center;
-    font-size: 18px;
+    background: rgba(255,255,255,.2); display: flex; align-items: center; justify-content: center; font-size: 18px;
   }
 
   .content {
-    flex: 1;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    padding: 16px;
-    width: 100%;
+    flex: 1; overflow-y: auto; overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; padding: 12px 16px; width: 100%;
   }
-  .tab-content > * + * { margin-top: 14px; }
+  .tab-content > * + * { margin-top: 12px; }
 
-  .score-card { border-radius: 20px; background: #f8fafc; border: 1px solid #e2e8f0; padding: 18px; }
+  .score-card { border-radius: 20px; background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px 18px; }
   .score-card-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
-  .score-label { font-size: 12px; color: #64748b; }
-  .score-number { font-size: 48px; font-weight: 700; color: #0f172a; margin-top: 4px; line-height: 1; }
-  .score-change { font-size: 12px; font-weight: 600; color: #059669; }
-  .score-sub { font-size: 11px; color: #94a3b8; margin-top: 2px; }
-  .progress-bar { margin-top: 14px; height: 8px; width: 100%; border-radius: 999px; background: #e2e8f0; overflow: hidden; }
+  .score-label { font-size: 13px; color: #64748b; }
+  .score-number { font-size: 52px; font-weight: 700; color: #0f172a; margin-top: 4px; line-height: 1; }
+  .score-change { font-size: 13px; font-weight: 600; color: #059669; }
+  .score-sub { font-size: 11px; color: #94a3b8; margin-top: 3px; }
+  .progress-bar { margin-top: 12px; height: 8px; width: 100%; border-radius: 999px; background: #e2e8f0; overflow: hidden; }
   .progress-fill { height: 100%; border-radius: 999px; background: #0f172a; transition: width .6s ease; }
 
-  .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
   .section-title { font-size: 15px; font-weight: 600; color: #0f172a; }
-  .section-action { font-size: 13px; font-weight: 500; color: #2563eb; background: none; border: none; cursor: pointer; font-family: inherit; }
 
   .reminder-card {
-    border-radius: 16px; border: 1px solid #e2e8f0; background: #fff; padding: 14px 16px;
+    border-radius: 14px; border: 1px solid #e2e8f0; background: #fff; padding: 10px 14px;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .reminder-card + .reminder-card { margin-top: 8px; }
+  .reminder-card + .reminder-card { margin-top: 6px; }
   .reminder-name { font-size: 14px; font-weight: 600; color: #0f172a; }
-  .reminder-meta { font-size: 11px; color: #94a3b8; margin-top: 3px; }
+  .reminder-meta { font-size: 11px; color: #94a3b8; margin-top: 2px; }
   .badge-on {
-    border-radius: 999px; background: #d1fae5; padding: 4px 10px;
+    border-radius: 999px; background: #d1fae5; padding: 4px 12px;
     font-size: 11px; font-weight: 700; color: #047857; flex-shrink: 0;
   }
 
+  .quick-stats { display: flex; gap: 8px; }
+  .quick-stat {
+    flex: 1; border-radius: 14px; background: #f8fafc;
+    border: 1px solid #e2e8f0; padding: 10px 12px; text-align: center;
+  }
+  .quick-stat-value { font-size: 20px; font-weight: 700; color: #0f172a; line-height: 1.2; }
+  .quick-stat-label { font-size: 10px; color: #94a3b8; margin-top: 2px; }
+
   .chart-wrap { border-radius: 20px; background: #f8fafc; border: 1px solid #f1f5f9; padding: 16px 16px 12px; }
-  .chart-title { font-size: 13px; font-weight: 600; color: #0f172a; margin-bottom: 12px; }
   .bar-chart-container { display: flex; align-items: stretch; height: 170px; }
   .y-axis-title { font-size: 11px; font-weight: 600; color: #64748b; margin-bottom: 8px; }
   .y-axis { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; padding-right: 8px; height: 150px; }
@@ -150,12 +136,6 @@ document.head.appendChild(mLink);
   .sev-low { font-size: 12px; font-weight: 700; color: #059669; }
   .zone-meta { display: flex; justify-content: space-between; margin-top: 6px; font-size: 12px; color: #94a3b8; }
 
-  .export-btn {
-    border-radius: 999px; background: #0f172a; color: #fff; border: none;
-    padding: 6px 14px; font-size: 12px; font-weight: 600; cursor: pointer; font-family: inherit;
-    -webkit-tap-highlight-color: transparent;
-  }
-  .export-btn:active { opacity: 0.7; }
   .summary-card { border-radius: 18px; border: 1px solid #e2e8f0; background: #fff; padding: 16px; }
   .summary-row { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; }
   .summary-row + .summary-row { border-top: 1px solid #f1f5f9; }
@@ -169,18 +149,11 @@ document.head.appendChild(mLink);
   .bar-fill-green { height: 100%; background: #34d399; border-radius: 999px; }
   .bar-fill-blue { height: 100%; background: #60a5fa; border-radius: 999px; }
 
-  .dashed-card { border-radius: 18px; border: 2px dashed #cbd5e1; background: #f8fafc; padding: 16px; }
-  .dashed-card p { font-size: 13px; color: #94a3b8; }
-
   .nav {
-    border-top: 1px solid #e2e8f0;
-    background: #fff;
+    border-top: 1px solid #e2e8f0; background: #fff;
     padding: 10px 0 calc(var(--safe-bottom) + 8px);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-shrink: 0;
-    width: 100%;
+    display: flex; align-items: center; justify-content: space-around;
+    flex-shrink: 0; width: 100%;
   }
   .nav-btn {
     background: none; border: none; cursor: pointer; text-align: center;
@@ -191,6 +164,49 @@ document.head.appendChild(mLink);
   .nav-btn:active { transform: scale(0.95); }
   .nav-btn.active { color: #2563eb; font-weight: 600; }
   .nav-icon { font-size: 20px; display: block; margin-bottom: 2px; }
+
+  .brush-life-card {
+    border-radius: 18px;
+    background: linear-gradient(135deg, #fdf4ff, #ede9fe, #e0f2fe);
+    border: 1px solid #ddd6fe; padding: 14px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .brush-ring-wrap { position: relative; width: 90px; height: 90px; flex-shrink: 0; }
+  .brush-ring-center {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    pointer-events: none;
+  }
+  .brush-ring-days { font-size: 26px; font-weight: 700; color: #0f172a; line-height: 1; }
+  .brush-ring-unit { font-size: 11px; color: #64748b; font-weight: 500; margin-top: 2px; }
+  .brush-life-info { flex: 1; min-width: 0; }
+  .brush-life-title { font-size: 14px; font-weight: 700; color: #0f172a; }
+  .brush-life-subtitle { font-size: 12px; color: #64748b; margin-top: 3px; }
+  .brush-life-status {
+    display: inline-block; margin-top: 6px;
+    font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 999px;
+  }
+
+  .tip-card {
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+    border: 1px solid #bbf7d0; padding: 16px;
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .tip-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+  .tip-body { flex: 1; min-width: 0; }
+  .tip-title { font-size: 14px; font-weight: 700; color: #065f46; }
+  .tip-text { font-size: 13px; color: #047857; margin-top: 4px; line-height: 1.45; }
+
+  .floss-btn {
+    width: 100%; padding: 14px; border-radius: 14px;
+    border: 2px solid #e2e8f0; background: #fff;
+    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600;
+    color: #0f172a; cursor: pointer; transition: all 0.3s ease;
+  }
+  .floss-btn.flossed {
+    background: #d1fae5; border-color: #059669; color: #047857;
+  }
 </style>
 </head>
 <body>
@@ -198,8 +214,79 @@ document.head.appendChild(mLink);
 <script type="text/babel">
 const { useState } = React;
 
+function BrushHeadRing({ daysLeft, totalDays }) {
+  const pct = daysLeft / totalDays;
+  const size = 90;
+  const stroke = 8;
+  const radius = (size - stroke) / 2;
+  const circ = 2 * Math.PI * radius;
+  const offset = circ * (1 - pct);
+
+  let gradId, statusText, statusBg, statusFg;
+  if (pct > 0.5) {
+    gradId = "brushGreen"; statusText = "Good condition"; statusBg = "#d1fae5"; statusFg = "#047857";
+  } else if (pct > 0.25) {
+    gradId = "brushAmber"; statusText = "Getting worn"; statusBg = "#fef3c7"; statusFg = "#b45309";
+  } else {
+    gradId = "brushRed"; statusText = "Replace soon"; statusBg = "#fee2e2"; statusFg = "#dc2626";
+  }
+
+  return (
+    <div className="brush-life-card">
+      <div className="brush-ring-wrap">
+        <svg width={size} height={size} viewBox={"0 0 " + size + " " + size}>
+          <defs>
+            <linearGradient id="brushGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#06b6d4" />
+              <stop offset="50%" stopColor="#10b981" />
+              <stop offset="100%" stopColor="#34d399" />
+            </linearGradient>
+            <linearGradient id="brushAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#f59e0b" />
+              <stop offset="50%" stopColor="#f97316" />
+              <stop offset="100%" stopColor="#eab308" />
+            </linearGradient>
+            <linearGradient id="brushRed" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#ef4444" />
+              <stop offset="50%" stopColor="#f97316" />
+              <stop offset="100%" stopColor="#ec4899" />
+            </linearGradient>
+            <filter id="ringGlow">
+              <feGaussianBlur stdDeviation="2" result="blur" />
+              <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+            </filter>
+          </defs>
+          <circle cx={size/2} cy={size/2} r={radius} fill="none" stroke="#e2e8f0" strokeWidth={stroke} />
+          <circle
+            cx={size/2} cy={size/2} r={radius}
+            fill="none" stroke={"url(#" + gradId + ")"} strokeWidth={stroke}
+            strokeLinecap="round"
+            strokeDasharray={circ}
+            strokeDashoffset={offset}
+            transform={"rotate(-90 " + size/2 + " " + size/2 + ")"}
+            filter="url(#ringGlow)"
+            style={{ transition: "stroke-dashoffset 0.8s ease" }}
+          />
+        </svg>
+        <div className="brush-ring-center">
+          <div className="brush-ring-days">{daysLeft}</div>
+          <div className="brush-ring-unit">days</div>
+        </div>
+      </div>
+      <div className="brush-life-info">
+        <div className="brush-life-title">Brush head life</div>
+        <div className="brush-life-subtitle">{Math.round(pct * 100)}% remaining &middot; {totalDays - daysLeft} days used</div>
+        <div className="brush-life-status" style={{ background: statusBg, color: statusFg }}>
+          {statusText}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const [activeTab, setActiveTab] = useState("home");
+  const [flossed, setFlossed] = useState(false);
 
   const weeklyScore = 82;
   const plaqueTrend = [78, 80, 76, 84, 82, 85, 82];
@@ -210,13 +297,12 @@ function App() {
   const focusZones = [
     { area: "Upper Right Molars", frequency: 3, trend: "+1", severity: "high" },
     { area: "Lower Left Incisors", frequency: 2, trend: "-1", severity: "medium" },
-    { area: "Upper Front Teeth", frequency: 1, trend: "stable", severity: "low" },
   ];
   const dentistSummary = [
-    { label: "Avg. weekly hygiene", value: "82 / 100" },
-    { label: "Brushing consistency", value: "13 / 14 sessions" },
-    { label: "Flossing consistency", value: "4 / 7 days" },
-    { label: "Top risk zone", value: "Upper right molars" },
+    { label: "Avg Score", value: "74" },
+    { label: "Brushing Consistency", value: "89%" },
+    { label: "Flossing Rate", value: "3.2×/wk" },
+    { label: "Top Risk Zone", value: "Upper right molars" },
   ];
   const reminders = [
     { title: "Morning brush", time: "7:30 AM / 9:00 AM", detail: "Weekdays / Weekends" },
@@ -224,10 +310,19 @@ function App() {
     { title: "Floss reminder", time: "8:55 PM", detail: "Every day" },
   ];
 
-  const sevClass = (s) => s === "high" ? "sev-high" : s === "medium" ? "sev-medium" : "sev-low";
+  const dentistTrend = Array.from({length: 90}, (_, i) => Math.round(74 + Math.random() * 12));
+  const dentistDays = Array.from({length: 90}, (_, i) => {
+    const d = new Date();
+    d.setDate(d.getDate() - (89 - i));
+    return (d.getMonth()+1) + "/" + d.getDate();
+  });
 
+  const sevClass = (s) => s === "high" ? "sev-high" : s === "medium" ? "sev-medium" : "sev-low";
   const chartHeight = 150;
   const yLabels = [100, 75, 50, 25, 0];
+  const dentistYLabels = [100, 80, 60, 40, 20, 0];
+  const brushDaysLeft = 25;
+  const brushTotalDays = 90;
 
   return (
     <div className="app">
@@ -257,6 +352,14 @@ function App() {
                   <div className="progress-fill" style={{width: weeklyScore + "%"}} />
                 </div>
               </div>
+
+              <button
+                className={"floss-btn" + (flossed ? " flossed" : "")}
+                onClick={() => setFlossed(true)}
+              >
+                {flossed ? "✓ Flossed today" : "Press after flossing"}
+              </button>
+
               <div>
                 <div className="section-header">
                   <div className="section-title">Reminders</div>
@@ -271,6 +374,8 @@ function App() {
                   </div>
                 ))}
               </div>
+
+              <BrushHeadRing daysLeft={brushDaysLeft} totalDays={brushTotalDays} />
             </>
           )}
 
@@ -279,8 +384,9 @@ function App() {
               <div className="section-header">
                 <div className="section-title">Care &amp; Insights</div>
               </div>
+
               <div className="chart-wrap">
-                <div className="y-axis-title">Plaque Score</div>
+                <div className="y-axis-title">Score</div>
                 <div className="bar-chart-container">
                   <div className="y-axis">
                     {yLabels.map((label) => (
@@ -290,13 +396,14 @@ function App() {
                   <div className="bar-chart">
                     {plaqueTrend.map((v, i) => (
                       <div className="bar-col" key={i}>
-                        <div className="bar" style={{height: (v / 100) * chartHeight + "px"}} />
+                        <div className="bar" style={{height: (v / 100) * 150 + "px"}} />
                         <span className="bar-label">{dailyData[i].day}</span>
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
+
               {focusZones.map((z) => (
                 <div className="zone-card" key={z.area}>
                   <div className="zone-row">
@@ -309,15 +416,23 @@ function App() {
                   </div>
                 </div>
               ))}
+
+              <div className="tip-card">
+                <div className="tip-icon">💡</div>
+                <div className="tip-body">
+                  <div className="tip-title">Tip: Focus on upper right molars</div>
+                  <div className="tip-text">This area has been flagged 3 times this week. Try angling your brush at 45° toward the gumline and spend an extra 10 seconds there.</div>
+                </div>
+              </div>
             </>
           )}
 
           {activeTab === "dentist" && (
             <>
               <div className="section-header">
-                <div className="section-title">Dentist snapshot</div>
+                <div className="section-title">Dentist Snapshot</div>
+                <span style={{fontSize:"12px",color:"#94a3b8"}}>Last 3 Months</span>
               </div>
-
               <div className="summary-card">
                 {dentistSummary.map((item) => (
                   <div className="summary-row" key={item.label}>
@@ -326,44 +441,35 @@ function App() {
                   </div>
                 ))}
               </div>
-
               <div className="summary-card">
-                <div className="breakdown-title">Scoring breakdown</div>
-                <div className="bar-row">
-                  <div className="bar-row-header"><span>Plaque coverage</span><span>18%</span></div>
-                  <div className="bar-track"><div className="bar-fill-red" style={{width:"18%"}} /></div>
-                </div>
-                <div className="bar-row">
-                  <div className="bar-row-header"><span>Brushing completeness</span><span>82%</span></div>
-                  <div className="bar-track"><div className="bar-fill-green" style={{width:"82%"}} /></div>
-                </div>
-                <div className="bar-row">
-                  <div className="bar-row-header"><span>Coverage consistency</span><span>76%</span></div>
-                  <div className="bar-track"><div className="bar-fill-blue" style={{width:"76%"}} /></div>
-                </div>
-              </div>
-
-              <div className="summary-card">
-                <div className="breakdown-title">High-risk areas</div>
+                <div className="breakdown-title">High-Risk Areas</div>
                 {focusZones.filter(z => z.severity !== "low").map((z) => (
                   <div className="summary-row" key={z.area}>
                     <span className="summary-label">{z.area}</span>
-                    <span className="summary-value">{z.frequency} misses</span>
                   </div>
                 ))}
               </div>
-
               <div className="summary-card">
-                <div className="breakdown-title">Trend (last 7 days)</div>
-                <div className="bar-chart" style={{height:"60px"}}>
-                  {plaqueTrend.map((v, i) => (
-                    <div className="bar-col" key={i}>
-                      <div className="bar" style={{height: v * 0.55 + "px"}} />
+                <div className="breakdown-title">Trend (Last 3 Months)</div>
+                <div className="chart-wrap" style={{border:"none",padding:"8px 0 0 0",background:"transparent"}}>
+                  <div className="y-axis-title">Score</div>
+                  <div className="bar-chart-container" style={{height:"140px"}}>
+                    <div className="y-axis" style={{height:"120px"}}>
+                      {dentistYLabels.map((label) => (
+                        <span className="y-axis-label" key={label}>{label}</span>
+                      ))}
                     </div>
-                  ))}
+                    <div className="bar-chart" style={{gap:"1px",padding:"0 4px",height:"120px"}}>
+                      {dentistTrend.map((v, i) => (
+                        <div className="bar-col" key={i} style={{gap:"0px"}}>
+                          <div className="bar" style={{height: (v / 100) * 120 + "px", maxWidth:"6px"}} />
+                          {i % 15 === 0 ? <span className="bar-label" style={{fontSize:"8px"}}>{dentistDays[i]}</span> : <span style={{height:"12px"}} />}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
-
             </>
           )}
         </div>
